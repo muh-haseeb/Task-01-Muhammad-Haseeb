@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8bc1c484b8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Decode Labs</a></div>
+            <ul class="links">
+                <li><a href="hero">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="hero">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="#" class="action_btn">Get Started</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Aliquam, 
+                atque.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Decode Labs. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i') 
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick= function () { 
+        dropDownMenu.classList.toggle('open')
+        
+        const isopen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isopen
+        ? 'fa-solid fa-xmark' 
+        : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
